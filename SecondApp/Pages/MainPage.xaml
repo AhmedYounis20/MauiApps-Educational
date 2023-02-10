@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SecondApp"
+             x:Class="SecondApp.MainPage">
+    
+
+    <ScrollView>
+        <VerticalStackLayout
+            x:Name="Vertical"
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <VerticalStackLayout.Resources>
+                <x:Double x:Key="DynamicSize">20</x:Double>
+            </VerticalStackLayout.Resources>
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="{x:Static Member=local:StaticResouce.FontSizeNumber}"
+                HorizontalOptions="Center" />
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="{x:DynamicResource DynamicSize}"
+                HorizontalOptions="Center" />
+            <Button Clicked="OnCounterClicked" Text="GetBiggr"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

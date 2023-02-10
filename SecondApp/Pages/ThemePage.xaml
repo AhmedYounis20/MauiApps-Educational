@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecondApp.ThemePage"
+             Title="Theme">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="TextColor">Green</Color>
+            <Color x:Key="Back">Black</Color>
+            <Color x:Key="FrameColor">Gray</Color>
+            <Style x:Key="frameStyle" TargetType="Frame">
+                <Setter Property="HeightRequest" Value="150"/>
+                <Setter Property="WidthRequest" Value="150"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout  HorizontalOptions="Center">
+        <HorizontalStackLayout HorizontalOptions="End">
+            
+        <Switch OnColor="Orange"
+        ThumbColor="Green" Toggled="OnThemeToggled"/>
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout Spacing="10" Padding="10">
+            <HorizontalStackLayout Spacing="10" Padding="10">
+                <Frame BackgroundColor="{DynamicResource Back}" Style="{x:StaticResource frameStyle}" >
+                    <Label Text="First" />
+                </Frame>
+                <Frame BackgroundColor="{DynamicResource FrameColor}" Style="{x:StaticResource frameStyle}">
+                    <Label Text="First" />
+                </Frame>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="10" Padding="10">
+                <Frame BackgroundColor="{DynamicResource FrameColor}" Style="{x:StaticResource frameStyle}">
+                    <Label Text="First" />
+                </Frame>
+                <Frame BackgroundColor="{DynamicResource Back}" Style="{x:StaticResource frameStyle}">
+                    <Label Text="First" />
+                </Frame>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="10" Padding="10">
+                <Frame BackgroundColor="{DynamicResource Back}" Style="{x:StaticResource frameStyle}">
+                    <Label Text="First" />
+                </Frame>
+                <Frame BackgroundColor="{DynamicResource FrameColor}" Style="{x:StaticResource frameStyle}">
+                    <Label Text="First" />
+                </Frame>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

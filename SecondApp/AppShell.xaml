@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SecondApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SecondApp"
+    Shell.FlyoutBehavior="Flyout">
+
+    <FlyoutItem Title="Home"  Icon="home.png">
+        <ShellContent
+        Title="Welcome Page"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Grid"  Icon="grid.png">
+        <ShellContent
+        Title="Grid"
+        ContentTemplate="{DataTemplate local:GridPage}"
+        Route="GridPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="theme" Icon="theme.png">
+        <ShellContent
+        Title="Theme"
+        ContentTemplate="{DataTemplate local:ThemePage}"
+        Route="ThemePage" />
+    </FlyoutItem>
+    <FlyoutItem Title="ON Platform" Icon="platform.png">
+        <ShellContent
+        Title="PlatForm Adabtive"
+        ContentTemplate="{DataTemplate local:OnPlatFormPage}"
+        Route="OnPlatFormPage" />
+    </FlyoutItem>
+
+</Shell>
